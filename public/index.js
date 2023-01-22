@@ -15,10 +15,10 @@ logoutBtn.addEventListener('click', () => {
 if (!sessionStorage.getItem('token')) {
   window.location.href = './login.html'
 }
-const url = 'http://localhost:4000'
+const url = 'http://23.22.42.11'
 const doctorsArr = []
 
-const getAllDoctors = () => axios.get('http://localhost:4000/getPhysicians').then(({ data: doctors }) => {
+const getAllDoctors = () => axios.get('http://23.22.42.11/getPhysicians').then(({ data: doctors }) => {
   renderItems(doctors)
 }).catch((error) => console.log(error))
 

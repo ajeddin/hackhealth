@@ -22,7 +22,7 @@ logoutBtn.addEventListener('click', () => {
 })
 
 
-axios.get('http://localhost:4000/getPhysicians').then(({ data: doctors }) => {
+axios.get('http://23.22.42.11//getPhysicians').then(({ data: doctors }) => {
     let doctorList = doctors.map((d) => {
         return `
         <option value="${d.doctor_id}">Dr. ${d.first_name} ${d.last_name} - ${d.title}</option>
@@ -43,7 +43,7 @@ const findDoctor = (e) => {
     console.log(date.value)
 
 
-    axios.post('http://localhost:4000/getDoctorsAvaiblity', { doctor_id: doctor_id, date: date.value }).then(({ data: doctorsAvaiblity }) => {
+    axios.post('http://23.22.42.11/getDoctorsAvaiblity', { doctor_id: doctor_id, date: date.value }).then(({ data: doctorsAvaiblity }) => {
         // console.log(doctorsAvaiblity);
         // console.log(doctorsAvaiblity.length);
         // console.log(usTime.length)
@@ -113,7 +113,7 @@ const appointmentSubmit = (e) => {
         description: desc.value
     }
 
-    axios.post('http://localhost:4000/appointment', body).then(
+    axios.post('http://23.22.42.11/appointment', body).then(
         () => alert("sucesss"))
 }
 
@@ -134,7 +134,7 @@ setTimeout(() => {
     let doctor_id = parseInt(doctor.value)
 
 
-    axios.post('http://localhost:4000/getUserAppointment', { user_id: userId }).then(({ data: dbres }) => {
+    axios.post('http://23.22.42.11/getUserAppointment', { user_id: userId }).then(({ data: dbres }) => {
         console.log(dbres)
 
 
