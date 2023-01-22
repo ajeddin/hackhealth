@@ -16,7 +16,7 @@ labels.forEach((label) => {
     .join("");
 });
 
-const baseUrl='http://localhost:4000'
+const baseUrl='http://http://23.22.42.11'
 const login = (body) => axios.post(`${baseUrl}/login`, body)
     .then((res)=> {
         console.log('hit login')
