@@ -22,7 +22,7 @@ logoutBtn.addEventListener('click', () => {
 })
 
 
-axios.get('http://23.22.42.11//getPhysicians').then(({ data: doctors }) => {
+axios.get('http://23.22.42.11/getPhysicians').then(({ data: doctors }) => {
     let doctorList = doctors.map((d) => {
         return `
         <option value="${d.doctor_id}">Dr. ${d.first_name} ${d.last_name} - ${d.title}</option>
